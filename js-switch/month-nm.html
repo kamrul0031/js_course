@@ -12,59 +12,60 @@
 
 
     <script>
-        function hitEnter(){
-            if(event.key === 'Enter'){
-                document.getElementById('btn').click();
-            }
-        }
-        function month(){
-            var month = parseInt(document.getElementById('ipt_num').value);
-            var res;
+       function hitEnter() {
+    if (event.key === 'Enter') {
+        document.getElementById('btn').click();
+    }
+}
 
-            switch(month){
-                case 1:
-                    res = 'january';
-                    break;
-                case 2:
-                    res = 'february';
-                    break;
-                case 3:
-                    res = 'march';
-                    break;
-                case 4:
-                    res = 'april';
-                    break;
-                case 5:
-                    res = 'may';
-                    break;
-                case 6:
-                    res = 'june';
-                    break;
-                case 7:
-                    res = 'july';
-                    break;
-                case 8:
-                    res = 'august';
-                    break;
-                case 9:
-                    res = 'septmber';
-                    break;
-                case 10:
-                    res = 'octber';
-                    break;
-                case 11:
-                    res = 'november';
-                    break;
-                case 12:
-                    res = 'december';
-                    break;
+function month() {
+    var month = parseInt(document.getElementById('ipt_num').value);
+    var res;
 
-                default:
-                    res = ' invalid input '
-            }
+    switch (month) {
+        case 1:
+            res = 'January';
+            break;
+        case 2:
+            res = 'February';
+            break;
+        case 3:
+            res = 'March';
+            break;
+        case 4:
+            res = 'April';
+            break;
+        case 5:
+            res = 'May';
+            break;
+        case 6:
+            res = 'June';
+            break;
+        case 7:
+            res = 'July';
+            break;
+        case 8:
+            res = 'August';
+            break;
+        case 9:
+            res = 'September';
+            break;
+        case 10:
+            res = 'October';
+            break;
+        case 11:
+            res = 'November';
+            break;
+        case 12:
+            res = 'December';
+            break;
 
-            document.getElementById('month').value = res;
-        }
+        default:
+            res = 'Invalid input';
+    }
+
+    document.getElementById('month').value = res;
+}
     </script>
 </body>
 </html>
