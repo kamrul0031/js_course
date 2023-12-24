@@ -17,7 +17,54 @@
                 document.getElementById('btn').click();
             }
         }
-        function()
+        function month(){
+            var month = parseInt(document.getElementById('ipt_num').value);
+            var res;
+
+            switch(month){
+                case 1:
+                    res = 'january';
+                    break;
+                case 2:
+                    res = 'february';
+                    break;
+                case 3:
+                    res = 'march';
+                    break;
+                case 4:
+                    res = 'april';
+                    break;
+                case 5:
+                    res = 'may';
+                    break;
+                case 6:
+                    res = 'june';
+                    break;
+                case 7:
+                    res = 'july';
+                    break;
+                case 8:
+                    res = 'august';
+                    break;
+                case 9:
+                    res = 'septmber';
+                    break;
+                case 10:
+                    res = 'octber';
+                    break;
+                case 11:
+                    res = 'november';
+                    break;
+                case 12:
+                    res = 'december';
+                    break;
+
+                default:
+                    res = ' invalid input '
+            }
+
+            document.getElementById('month').value = res;
+        }
     </script>
 </body>
 </html>
