@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number-comparison</title>
+</head>
+<body>
+    <input type="number" id="num1">
+    <br>
+    <input type="number" id="num2">
+    <button onclick="check()">check</button>
+    <br>
+    <span>Inputted greater number is :</span>
+    <input type="text" id="result">
+
+
+    <script>
+        function check() {
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            
+            // Convert input values to numbers
+            num1 = parseFloat(num1);
+            num2 = parseFloat(num2);
+
+            var res;
+
+            if (num1 > num2) {
+                res = num1;
+            } else if (num1 == num2) {
+                res = 'Both numbers are the same';
+            } else {
+                res = num2;
+            }
+
+            // Display the result in the 'result' input field
+            document.getElementById('result').value = res;
+
+            // Alert the result
+            alert(res);
+        }
+    </script>
+</body>
+</html>

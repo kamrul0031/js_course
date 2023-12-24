@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grade-assingment</title>
+</head>
+<body>
+    <input id="grade" type="number" onkeydown="hitEnter()">
+    <button id="c_btn" onclick="grade()">check</button>
+    <br>
+    <input type="text" id="res">
+
+
+    <script>
+        function hitEnter(){
+            if(event.key === "Enter"){
+                document.getElementById('c_btn').click();
+            }
+        }
+        function grade(){
+            var grade = parseInt(document.getElementById('grade').value);
+            var res;
+           
+
+
+            switch(true){
+                case (grade > 79 && grade <= 100):
+                    res = 'A+';
+                    break;
+                case (grade > 69 && grade <= 79):
+                    res = 'A';
+                    break;
+                case (grade > 59 && grade <= 69):
+                    res = 'A-';
+                    break;
+                case (grade > 49 && grade <= 59):
+                    res = 'c';
+                    break;
+                case (grade > 0 && grade <= 49):
+                    res = 'F';
+                    break;
+
+                default:
+                    res = 'invalid input';
+
+            }
+           
+            alert(res);
+        }
+
+
+
+
+
+      /*  using conditional statement
+      function grade(){
+            var grade = parseInt(document.getElementById('grade').value);
+            var res;
+
+            if(grade > 79 && grade < 101){
+                res = 'A+';
+            }
+            else if(grade > 69 && grade <= 79){
+                res = 'A';
+            }
+            else if(grade > 59 && grade <= 69){
+                res = 'B';
+            }
+            else if(grade > 49 && grade <= 59){
+                res = 'C';
+            }
+            else if(grade > 0 && grade <= 49){
+                res = 'F';
+            }
+            else{
+                res = 'invalid input';
+            }
+
+            document.getElementById('res').value = res;
+        } */
+    </script>
+</body>
+</html>

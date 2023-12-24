@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temparature-check</title>
+</head>
+<body>
+    <input type="number" id="temparature" placeholder="celcious">
+    <button onclick="check()">check</button>
+    <input type="text" id="res">
+
+
+    <script>
+        function check(){
+            var temp = document.getElementById('temparature').value;
+            var res;
+
+
+            if(temp >= 30){
+                res = 'hot day';
+            }
+            else if(temp > 10 && temp < 30){
+                res = 'moderate';
+            }
+            else if(temp <= 10){
+                res = 'cool day';
+            }
+            else{
+                res = 'input is not valid';
+            }
+
+            document.getElementById('res').value = res;
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vowel-consonant</title>
+</head>
+<body>
+    <input type="text" id="ipt"> 
+    <button onclick="vccheck()">check</button>
+    <br>
+    <input type="text" id="res">
+
+    <script>
+        function vccheck(){
+            var ipt = String(document.getElementById('ipt').value).toLowerCase(); // Convert to lowercase for case-insensitivity
+            var res;
+
+            if (ipt === 'a' || ipt === 'e' || ipt === 'i' || ipt === 'o' || ipt === 'u'){
+                res = 'vowel';
+            }
+            else {
+                res = 'consonant';
+            }
+
+            document.getElementById('res').value = res;
+        }
+    </script>
+</body>
+</html>

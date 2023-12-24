@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even - odd - checker</title>
+</head>
+<body>
+    <input type="number" id="num">
+    <button onclick="check()">check</button>
+    <br>
+    <input type="text" id="res">
+
+    <script>
+        function check(){
+            var num = parseInt(document.getElementById('num').value);
+            var res;
+
+            if((num % 2 == 0)){
+                res = 'even';
+            }
+            else if(num % 2 != 0){
+                res = 'odd';
+            }
+            else{
+                res = 'invalid input';
+            }
+
+            document.getElementById('res').value = res;
+        }
+    </script>
+</body>
+</html>

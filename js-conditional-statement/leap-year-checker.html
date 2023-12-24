@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leap-year-checker</title>
+</head>
+<body>
+    <input id="year" type="number">
+    <button onclick="lycheck()">leap year check</button>
+
+    <script>
+        function lycheck() {
+            var year = parseInt(document.getElementById('year').value);
+            var res;
+
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                res = 'Leap year';
+            } else {
+                // Find the next leap year
+                var nextLeapYear = year + (4 - (year % 4));
+                res = 'Not a leap year. Next leap year: ' + nextLeapYear;
+            }
+
+            alert(res);
+        }
+    </script>
+</body>
+</html>
