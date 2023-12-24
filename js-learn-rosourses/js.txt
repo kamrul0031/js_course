@@ -1,0 +1,19 @@
+1.comment
+    ->single line comment
+    ->multiline comment
+2.variable
+3.data-type
+4.statements
+    ->if-else_conditional statement
+        if, else-if, else
+    ->loop-control statement
+        for
+        for in
+        for of
+        while
+        do-while
+    ->switch
+        case
+        default
+
+5.operators

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color-code</title>
+</head>
+<body>
+    <input type="code" id="ipt_code" onkeydown="hitEnter()">
+    <button id="btn" onclick="month()">get month</button><br>
+    <input type="text" id="month" readonly>
+
+<script>
+    function getColorName(colorCode) {
+    var colorName;
+
+    switch (colorCode) {
+        case '#FF0000':
+            colorName = 'Red';
+            break;
+        case '#00FF00':
+            colorName = 'Green';
+            break;
+        case '#0000FF':
+            colorName = 'Blue';
+            break;
+        default:
+            colorName = 'Unknown';
+            break;
+    }
+
+    return colorName;
+}
+
+var colorCode = '#00FF00';
+var colorName = getColorName(colorCode);
+console.log(colorName);  // Output: Green
+
+</script>
+</body>
+</html>
