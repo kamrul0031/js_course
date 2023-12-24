@@ -2,7 +2,23 @@
     ->single line comment
     ->multiline comment
 2.variable
+
 3.data-type
+    ->primitive
+        string
+        number
+        boolean
+        null
+        undifined
+        symbol
+        big int
+    
+    ->Non-primitive
+        object
+        array
+        reg exp(regular expression)
+
+
 4.statements
     ->if-else_conditional statement
         if, else-if, else
