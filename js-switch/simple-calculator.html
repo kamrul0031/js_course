@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple-calculator</title>
+</head>
+<body>
+    <input type="number" id="num1" onkeydown="hitEnter()">
+    <select style="appearance: none; border: none;" name="" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="number" id="num2" onkeydown="hitBtn()">
+    <button id="btn" onclick="calc()">calculate</button>
+    <input type="number" id="res" readonly placeholder="result">
+
+    <script>
+        function hitEnter(){
+            if(event.key === 'Enter'){
+                document.getElementById('num2').focus();
+            }
+        }
+        function hitBtn(){
+            if(event.key === 'Enter'){
+                document.getElementById('btn').click();
+            }
+        }
+
+       function calc(){
+        var num1 = parseFloat(document.getElementById('num1').value);
+        var num2 = parseFloat(document.getElementById('num2').value);
+
+        var ope = document.getElementById('operator').value;
+        var res;
+
+        switch(ope){
+            case '+':
+                res = num1 + num2;
+                break;
+            case '-':
+                res = num1 - num2;
+                break;
+            case '*':
+                res = num1 * num2;
+                break;
+            case '/':
+                res = num1 / num2;
+                break;
+            case '%':
+                res = num1 % num2;
+                break;
+                   
+        }
+
+
+        document.getElementById('res').value = res;
+       }
+    </script>
+</body>
+</html>
