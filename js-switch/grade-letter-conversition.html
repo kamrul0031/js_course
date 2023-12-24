@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grade_to_letter_conversation</title>
+</head>
+<body>
+    <input id="ipt_num" type="number" onkeydown="hitEnter()">
+    <button id="btn" onclick="grade()">get grade</button>
+    <br>
+    <input type="text" id="res">
+
+
+    <script>
+       function hitEnter(){
+        if (event.key === 'Enter') {
+            document.getElementById('btn').click();
+        }
+    }
+
+
+        function grade(){
+            var grade = parseInt(document.getElementById('ipt_num').value);
+            var res;
+
+
+            switch(true){
+                case (grade > 89 && grade <= 100):
+                    res = 'A';
+                    break;
+
+                case (grade > 79 && grade <= 89):
+                    res = 'B';
+                    break;
+
+                case (grade > 69 && grade <= 79):
+                    res = 'C';
+                    break;
+
+                case (grade > 59 && grade <= 69):
+                    res = 'D';
+                    break;
+
+                case (grade > 0 && grade <= 59):
+                    res = 'F';
+                    break;
+
+                
+            }
+            
+            document.getElementById('res').value = res;
+        }
+    </script>
+</body>
+</html>

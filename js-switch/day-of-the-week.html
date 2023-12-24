@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day-of-the-week</title>
+</head>
+<body> 
+    <input type="number" id="ipt_num" onkeydown="hitEnter()">
+    <button id="btn" onclick="day()">get day name</button><br>
+    <input type="text" id="day_nm" readonly>
+
+    <script>
+        function hitEnter(){
+            if(event.key === 'Enter'){
+                document.getElementById('btn').click();
+            }
+        }
+
+        function day(){
+            var day = parseInt(document.getElementById('ipt_num').value);
+            var res;
+
+            switch(day){
+                case 1:
+                    res = 'Sunday';
+                    break;
+                   
+                case 2:
+                    res = 'Monday';
+                    break;
+
+                case 3:
+                    res = 'Tuesday';
+                    break;
+
+                case 4:
+                    res = 'Wednesday';
+                    break;
+
+                case 5:
+                    res = 'Thursday';
+                    break;
+
+                case 6:
+                    res = 'Friday';
+                    break;
+
+                case 7:
+                    res = 'Saturday';
+                    break;
+
+                default:
+                    res = 'Inputed value is invalid';
+            }
+
+            alert(res);
+        }
+    </script>
+</body>
+</html>
